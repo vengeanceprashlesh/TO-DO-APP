@@ -1,14 +1,17 @@
-const mongoose = require("mongoose")
-mongoose.connect("mongodb+srv://Prashlesh:kishan@cluster0.f3qlbuo.mongodb.net/todos")
-const todoSchema = mongoose.Schema({
-    title: string,
-    description: string,
-    completed: boolean
-})
+const mongoose = require('mongoose');
 
-const todo = mongoose.model("todos",todoSchema);
+mongoose.connect("mongodb+srv://Prashlesh:kishan@learning.pdxzcaa.mongodb.net/User_app?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
-module.exports = {
-    todo
-}
+const todoSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  completed: Boolean
+});
+
+const todo = mongoose.model("todos", todoSchema);
+
+module.exports = { todo };
 

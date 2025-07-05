@@ -9,6 +9,7 @@
   "author": "Prashlesh",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "install": "^0.13.0",
     "mongoose": "^8.16.1",
